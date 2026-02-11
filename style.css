@@ -1985,36 +1985,3 @@ img.emoji {
 
 
 
-/* --- FULL SCREEN & NOTCH FIX (AppCreator24) --- */
-
-:root {
-    /* Notch ke liye space define kar rahe hain */
-    --safe-area-top: env(safe-area-inset-top, 0px);
-}
-
-/* Isse website ka content notch ke piche jayega */
-html, body {
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden; /* Screen se bahar na jaye */
-    background-color: var(--surface); /* Taki status bar ka color match ho */
-}
-
-/* Header ko force karke notch tak le jana */
-.app-header {
-    height: calc(60px + var(--safe-area-top)) !important;
-    padding-top: var(--safe-area-top) !important;
-    position: fixed !important; /* Screen par fix rahega */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 9999 !important;
-}
-
-/* Content ko header ke niche se shuru karne ke liye padding */
-#chat-container {
-    padding-top: calc(70px + var(--safe-area-top)) !important;
-}
-
-
