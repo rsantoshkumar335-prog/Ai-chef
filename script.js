@@ -2017,22 +2017,3 @@ function typeWriter(element, html, speed = 10) {
 
 
 
-// Fullscreen force karne ka function
-function forceFullscreen() {
-    const doc = window.document;
-    const docEl = doc.documentElement;
-
-    const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-
-    if (requestFullScreen) {
-        requestFullScreen.call(docEl);
-    }
-}
-
-// User jab pehli baar screen par touch karega tab fullscreen trigger hoga
-// (Kyunki browser bina interaction ke fullscreen allow nahi karta)
-window.addEventListener('click', () => {
-    forceFullscreen();
-}, { once: true });
-
-
