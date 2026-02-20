@@ -13,13 +13,6 @@
     --border-radius: 16px;
     --safe-area-bottom: env(safe-area-inset-bottom);
 }
-html {
-  font-size: 14px; /* Default 16px hota hai */
-}
-
-body {
-  zoom: 0.95;
-}
 
 * {
     margin: 0;
